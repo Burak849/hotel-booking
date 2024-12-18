@@ -1,12 +1,27 @@
-import Image from "next/image";
+'use client';
 
+import { useEffect, useRef, useState } from "react";
+import Navbar from "./components/Navbar";
 export default function Home() {
   return (
-      <div>
-<br/>
-<br/>
-<br/>
-          <br />
-      </div>
+      <>
+          <div className='bg'>
+          <Navbar />
+
+
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+              <br />
+          <br/>
+              <br />
+          </div>
+      </>
   );
 }
+
+
+
+
