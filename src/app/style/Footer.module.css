@@ -1,0 +1,9 @@
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    height: 20rem;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity, .09));
+}

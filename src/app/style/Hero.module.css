@@ -60,16 +60,48 @@
 }
 
 .button {
-    background-color: #007BFF;
-    color: white;
-    padding: 0.7rem 1.5rem;
     border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    color: #fff;
+    background-image: linear-gradient(30deg, #0400ff, #4ce3f7);
+    border-radius: 20px;
+    background-size: 100% auto;
+    font-family: inherit;
+    font-size: 17px;
+    padding: 0.6em 1.5em;
 }
 
     .button:hover {
-        background-color: #0056b3;
+        background-position: right center;
+        background-size: 200% auto;
+        -webkit-animation: pulse 2s infinite;
+        animation: pulse512 1.5s infinite;
     }
+
+@keyframes pulse512 {
+    0% {
+        box-shadow: 0 0 0 0 #05bada66;
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+    }
+}
+
+
+.informations {
+    display: flex; 
+    position: relative; 
+    background: transparent;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-family: cursive;
+    flex-direction:column;
+    align-items:center;
+    gap:4rem;
+    padding:4rem;
+
+}
