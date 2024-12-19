@@ -1,0 +1,75 @@
+.container {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    max-width: 100%;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+    align-items: center;
+    z-index: 0;
+    background: url(../../../public/media/booking-wp.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.banner {
+    position: relative;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity, 0.2));
+    backdrop-filter: blur(0.5rem);
+    border-radius: 999px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+    top: 0;
+    bottom: 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: nowrap; 
+}
+
+.input {
+    width: 80%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.checkboxLabel {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    gap: 0.5rem;
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+}
+
+.button {
+    background-color: #007BFF;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .button:hover {
+        background-color: #0056b3;
+    }
