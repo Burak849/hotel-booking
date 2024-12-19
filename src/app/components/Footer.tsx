@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../style/Footer.module.css';
-import rentstyle from '../style/Hero.module.css';
+import rentstyle from '../style/Home.module.css';
 import styled from 'styled-components';
 
 

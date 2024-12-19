@@ -1,10 +1,17 @@
 import React from 'react';
-import styles from '../style/Hero.module.css';
+import styles from '../style/Home.module.css';
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
+
+const Home = () => {
+
+    const navigate = useNavigate(); 
+
+    const handleDetailsClick = () => {
+        navigate('../api/hotels'); 
+    };
 
 
-
-const Hero = () => {
     return (<>
         <section className={styles["container"]} >
             <h1 style={{ display: 'flex', justifyContent: 'center', fontSize: '2rem', color: 'white' }}>
@@ -34,7 +41,9 @@ const Hero = () => {
             <h1>Popular Travel Spots</h1>
             <p style={{padding: '2rem'} }>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum blandit vitae orci quis dignissim.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum blandit vitae orci quis dignissim.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum blandit vitae orci quis dignissim.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum blandit vitae orci quis dignissim.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum blandit vitae orci quis dignissim.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum blandit vitae orci quis dignissim.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum blandit vitae orci quis dignissim.
             </p>
             
             <StyledWrapper>
@@ -51,7 +60,7 @@ const Hero = () => {
                         <img src="/media/dublin.jpg" className="card__image" alt="Dublin" />
                     <div className="card__content">
                             <span className="title">Dublin</span>
-                            <button type="submit" className={styles.button} style={{ fontSize: 15, padding: '.5em 2em', width:'9em' }}>Details</button>
+                            <button type="submit" className={styles.button} style={{ fontSize: 15, padding: '.5em 2em', width: '9em' }} onClick={handleDetailsClick}>Details</button>
 
                     </div>
                     </div>
@@ -221,4 +230,4 @@ const StyledWrapper = styled.div`
     transform: scale(1.3) rotate(-30deg);
   }`;
 
-export default Hero;
+export default Home;
