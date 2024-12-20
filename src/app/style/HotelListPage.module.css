@@ -1,10 +1,16 @@
 .listing{
     display:flex;
-    padding:2rem;
+    padding:10rem;
     justify-content:center;
     position:relative;
     align-items:center;
     flex-direction:column;
-    gap:1.5rem;
     background:transparent;
+}
+
+.DetailList {
+    display: flex; 
+    flex-wrap: wrap;
+    gap:1rem;
+    justify-content:center;
 }

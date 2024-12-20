@@ -1,4 +1,6 @@
-﻿import { useRouter } from 'next/router';
+﻿"use client";
+
+import { useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 type Room = {
@@ -18,42 +20,40 @@ type Hotel = {
 };
 
 const HotelPage = () => {
-    const { query, push } = useRouter();
+    const { id } = useParams(); 
     const [hotel, setHotel] = useState<Hotel | null>(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
-        if (query.id) {
-            const fetchHotel = async () => {
-                try {
-                    const response = await fetch(`/api/hotels`);  // API'den otel verisini al
-                    if (!response.ok) {
-                        throw new Error(`Failed to fetch hotels: ${response.statusText}`);
-                    }
-                    const data: Hotel[] = await response.json();
-                    const selectedHotel = data.find((h) => h.id === parseInt(query.id as string));
+        if (!id) return; 
 
-                    if (selectedHotel) {
-                        setHotel(selectedHotel);
-                    } else {
-                        setError("Hotel not found.");
-                        setTimeout(() => push('/'), 2000); // Hotel bulunamazsa anasayfaya yönlendir
-                    }
-                } catch (err: any) {
-                    setError(err.message || "An error occurred while fetching the hotel.");
-                    setTimeout(() => push('/'), 2000); // Hata durumunda anasayfaya yönlendir
-                } finally {
-                    setLoading(false);
+        const fetchHotel = async () => {
+            try {
+                const response = await fetch(`/api/hotels`);
+                if (!response.ok) {
+                    throw new Error(`Failed to fetch hotels: ${response.statusText}`);
                 }
-            };
+                const data: Hotel[] = await response.json();
+                const selectedHotel = data.find((h) => h.id === parseInt(id));
 
-            fetchHotel();
-        }
-    }, [query.id, push]);
+                if (selectedHotel) {
+                    setHotel(selectedHotel);
+                } else {
+                    setError("Hotel not found.");
+                }
+            } catch (err: any) {
+                setError(err.message || "An error occurred while fetching the hotel.");
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchHotel();
+    }, [id]);
 
     if (loading) return <div>Loading...</div>;
-    if (error) return <div>{error} Redirecting to homepage...</div>;
+    if (error) return <div>{error}</div>;
 
     if (hotel) {
         return (

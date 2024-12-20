@@ -6,7 +6,7 @@ import styles from './style/Home.module.css';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
 import { useNavigate } from 'react-router-dom';
-
+import Link from "next/link";
 
 
 const Home = () => {
@@ -52,7 +52,10 @@ const Home = () => {
                         <img src="/media/cork.jpg" className="card__image" alt="Cork" />
                         <div className="card__content" style={{ content: '24,50$' }}>
                             <span className="title">Cork</span>
+
+                            <Link href="/hotel">
                             <button type="submit" className={styles.button} style={{ fontSize: 15, padding: '.5em 2em', width: '9em' }} >Details</button>
+                            </Link>
 
                         </div>
                     </div>
@@ -60,16 +63,18 @@ const Home = () => {
                         <img src="/media/dublin.jpg" className="card__image" alt="Dublin" />
                         <div className="card__content">
                             <span className="title">Dublin</span>
+                            <Link href="/hotel">
                             <button type="submit" className={styles.button} style={{ fontSize: 15, padding: '.5em 2em', width: '9em' }} >Details</button>
-
+                            </Link>
                         </div>
                     </div>
                     <div className="card">
                         <img src="/media/galway.jpg" className="card__image" alt="Galway" />
                         <div className="card__content">
                             <span className="title">Galway</span>
+                            <Link href="/hotel">
                             <button type="submit" className={styles.button} style={{ fontSize: 15, padding: '.5em 2em', width: '9em' }} >Details</button>
-
+                            </Link>
                         </div>
                     </div>
 
