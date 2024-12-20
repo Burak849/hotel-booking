@@ -3,6 +3,8 @@
 import { useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import styled from "styled-components";
+import { url } from 'inspector';
+import styles from "../../style/About.module.css";
 
 type Room = {
     roomType: string;
@@ -79,7 +81,7 @@ const HotelPage = () => {
     if (hotel) {
         return (<>
 
-            <div style={{ display: 'flex', justifyContent: 'center', padding: '20rem', alignItems: 'center', gap:'1rem' }}>
+            <div className={styles['detailsbg'] }>
             <StyledWrapper>
                     <div className="card">
 
@@ -146,7 +148,7 @@ const StyledWrapper = styled.div`
     border-radius:12px;
 }
 .btn {
-    width: auto;
+    width: 25vh;;
     font-weight: 400;
     border: none;
     display: block;
@@ -181,6 +183,7 @@ const StyledWrapper = styled.div`
       display:flex;
       color:black;
       align-items: center;
+      flex-direction: column;
   }
   .card-image {
     background-color: rgba(0, 0, 0, 0.1);
