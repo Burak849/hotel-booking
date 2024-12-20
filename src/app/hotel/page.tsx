@@ -7,12 +7,20 @@ import styled from "styled-components";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
+
+type Room = {
+    roomType: string;
+    amount: number;
+};
 interface Hotel {
     id: number;
     name: string;
     location: string;
     rating: number;
     imageUrl: string;
+    datesOfTravel: string[];
+    boardBasis: string;
+    rooms: Room[];
 }
 
 const HotelListPage = () => {
@@ -59,10 +67,10 @@ const HotelListPage = () => {
             <div className={styles["listing"]}>
                 <h1
                     style={{
-                        padding: "3rem",
+                        padding: "2rem",
                         fontSize: 44,
-                        color: "white",
-                        textShadow: "white",
+                        color: "teal",
+                        textShadow: "0px 0px 10px white",
                         fontFamily: "cursive",
                         fontWeight: 800,
                     }}
@@ -76,34 +84,13 @@ const HotelListPage = () => {
                     </LoadingOverlay>
                 )}
                 <StyledWrapper>
-                {isFetching && <div className={styles["loading-bar"]} />}
-
                     <ul className={styles["DetailList"]}>
                         {hotels.map((hotel) => (
                             <li key={hotel.id}>
                                 <article className="card">
                                     <section className="card__hero">
-                                        <header className="card__hero-header">
-                                            <span>$100</span>
-                                            <div className="card__icon">
-                                                <svg
-                                                    height={20}
-                                                    width={20}
-                                                    stroke="currentColor"
-                                                    strokeWidth="1.5"
-                                                    viewBox="0 0 24 24"
-                                                    fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                >
-                                                    <path
-                                                        d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z"
-                                                        strokeLinejoin="round"
-                                                        strokeLinecap="round"
-                                                    />
-                                                </svg>
-                                            </div>
-                                        </header>
                                         <p className="card__job-title">{hotel.name}</p>
+                                        <img src={hotel.imageUrl} className="image"/>
                                     </section>
                                     <div className="card__footer">
                                         <div className="card__job-summary">
@@ -140,6 +127,19 @@ const HotelListPage = () => {
                                                 </p>
                                             </div>
                                         </div>
+                                        <p><strong>Travel Dates:</strong> {hotel.datesOfTravel.join(" to ")}</p>
+                                        <p><strong>Board Basis:</strong> {hotel.boardBasis}</p>
+                                        <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', gap:'0.5rem' }}>
+                                            <h2>Available Rooms</h2>
+                                            <ul style={{ display: 'flex', gap: '1rem' }}>
+                                            {hotel.rooms.map((room, index) => (
+                                                <li key={index}>
+                                                    <strong>{room.roomType}:</strong> {room.amount} rooms available
+                                                </li>
+
+                                            ))}
+                                        </ul>
+                                        </div>
                                         <button
                                             className="card__btn"
                                             onClick={() => handleViewClick(hotel.id)}
@@ -169,48 +169,41 @@ const LoadingOverlay = styled.div`
     justify-content: center;
     align-items: center;
     z-index: 1000;
-
-    .loading-indicator {
-        color: white;
-        font-size: 2rem;
-        font-weight: bold;
-        background: rgba(0, 0, 0, 0.7);
-        padding: 1.5rem 2rem;
-        border-radius: 1rem;
-        text-align: center;
-    }
 `;
 
 
 const StyledWrapper = styled.div`
+
   .card {
-    width: 30vh;
-    height:35vh;
-    background-color: #fefefe;
+    width: 100vh;
+    height:auto;
+    background-color: #fef4e0;
     border-radius: 1.2rem;
     padding: 0.5rem;
     color: #141417;
   }
   .card__hero {
-    background-color: #fef4e2;
-    border-radius: 0.5rem 0.5rem 0 0;
-    padding: 1.5rem;
+    position:relative;
+    width:100%;
+    height:30vh;
+    overflow:hidden;
     font-size: 0.875rem;
   }
   .card__hero .card__job-title {
-    margin: 2rem 0;
-    font-size: 2rem;
+    position:absolute;
+    bottom:0%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    color: #272727;
+    font-size: 1.6rem;
     font-weight: 600;
-    padding-right: 2rem;
+    z-index:2;
   }
   .card__hero-header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 1rem;
-    font-weight: 700;
+    justify-content: flex-end;
+    font-weight: 800;
+    margin-right:2rem;
   }
   .card__footer {
     display: flex;
@@ -237,7 +230,7 @@ const StyledWrapper = styled.div`
     align-items: center;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 0.75rem;
+    gap: 1rem;
   }
   .card__btn {
     width: 100%;
@@ -251,6 +244,19 @@ const StyledWrapper = styled.div`
     background-color: #141417;
     color: #fff;
     font-size: 1rem;
+  }
+  .card__btn:hover {
+  background: #315cfd;
+  color: white;
+  font-size: 1rem;
+}
+  .image{
+      height:100%;
+      width:100%;
+      object-fit:cover;
+      position:absolute;
+      z-index:1;
+          border-radius: 1.2rem;
   }
   @media (min-width: 340px) {
     .card__btn {

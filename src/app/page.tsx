@@ -14,28 +14,28 @@ const Home = () => {
 
     return (<>
         <section className={styles["container"]} >
-            <h1 style={{ display: 'flex', justifyContent: 'center', fontSize: '2rem', color: 'white', marginTop:'8rem' }}>
-                Let's see what expect in our journey!</h1><br /><br /><br /><br /><br /><br /><br />
+            <h1 style={{ display: 'flex', fontWeight: 800, fontFamily:'Blue Sans, Roboto, Helvetica, Arial, sans-serif', justifyContent: 'center', fontSize: 48, color: 'white', marginTop: '15rem' }}>
+                Traveling in comfort, like never before.</h1><br /><br /><br /><br /><br /><br /><br />
             <div className={styles.banner}>
                 <form className={styles.form}>
 
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+                    <div style={{ display: 'flex', color: 'white', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
                     <label className={styles.label}>Guests</label>
                     <input type="number" placeholder="Guests" className={styles.input} />
                     </div>
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+                    <div style={{ display: 'flex', color: 'white', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
                     <label className={styles.label}>Destination</label>
                     <input type="text" placeholder="City" className={styles.input} />
                     </div>
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+                    <div style={{ display: 'flex', color: 'white', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
                     <label className={styles.label}>Departure Location</label>
                     <input type="text" placeholder="City" className={styles.input} />
                     </div>
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+                    <div style={{ display: 'flex', color: 'white', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
                     <label className={styles.label}>Departure Date</label>
                     <input type="date" placeholder="Date" className={styles.input} />
                     </div>
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+                    <div style={{ display: 'flex', color: 'white', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
                         <label className={styles.label}>Return Date</label>
                     <input type="date" placeholder="Date" className={styles.input} />
                         </div>

@@ -17,7 +17,7 @@ const NotFound = () => {
         <div style={{ textAlign: "center", padding: "20vh", fontSize: 50 }}>
             <h1>404 - Page Not Found</h1>
             <p>
-                You are redicting to <a href="/hotel"><b>Hotels</b></a> page in 5sec..
+                You are redicting to <a href="/hotel">"Hotels"</a> page in 5sec..
             </p>
         </div>
     );
