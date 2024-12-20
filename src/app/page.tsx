@@ -52,7 +52,10 @@ const Home = () => {
                         </div>
                         </div>
                     </StyledWrapper>
-                    <button type="submit" className={styles.button}>Search</button>
+                    <Link href="/hotel">
+                        <button type="submit" className={styles.button}>Search</button>
+                    </Link>
+
                 </form>
             </div>
 
@@ -68,9 +71,9 @@ const Home = () => {
 
             <StyledWrapper>
                 <div style={{ display: 'flex', justifyContent: 'center', gap: '4.5rem', position: 'relative' }}>
-                    <div className="card">
+                    <div className="card card-cork">
                         <img src="/media/cork.jpg" className="card__image" alt="Cork" />
-                        <div className="card__content" style={{ content: '24,50$' }}>
+                        <div className="card__content">
                             <span className="title">Cork</span>
 
                             <Link href="/hotel">
@@ -79,7 +82,7 @@ const Home = () => {
 
                         </div>
                     </div>
-                    <div className="card">
+                    <div className="card card-dublin">
                         <img src="/media/dublin.jpg" className="card__image" alt="Dublin" />
                         <div className="card__content">
                             <span className="title">Dublin</span>
@@ -88,7 +91,7 @@ const Home = () => {
                             </Link>
                         </div>
                     </div>
-                    <div className="card">
+                    <div className="card card-galway">
                         <img src="/media/galway.jpg" className="card__image" alt="Galway" />
                         <div className="card__content">
                             <span className="title">Galway</span>
@@ -97,7 +100,15 @@ const Home = () => {
                             </Link>
                         </div>
                     </div>
-
+                    <div className="card card-paris">
+                        <img src="/media/paris.jpg" className="card__image" alt="Galway" />
+                        <div className="card__content">
+                            <span className="title">Paris</span>
+                            <Link href="/hotel">
+                                <button type="submit" className={styles.button} style={{ fontSize: 15, padding: '.5em 2em', width: '9em' }} >Details</button>
+                            </Link>
+                        </div>
+                    </div>
                 </div>
             </StyledWrapper>
 
@@ -108,6 +119,57 @@ const Home = () => {
 
 }
 const StyledWrapper = styled.div`
+.card-paris::before {
+  content: "$79.99";
+  position: absolute;
+  width: 5.5rem;
+  height: 5rem;
+  top: 60%;
+  right: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #ef476f;
+  color: aliceblue;
+  font-weight: 500;
+  transition: all 0.5s ease;
+}
+
+.card-cork::before {
+  content: "$49.99";
+  position: absolute;
+  width: 5.5rem;
+  height: 5rem;
+  top: 60%;
+  right: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #ef476f;
+  color: aliceblue;
+  font-weight: 500;
+  transition: all 0.5s ease;
+}
+
+.card-galway::before {
+  content: "$32.50";
+  position: absolute;
+  width: 5.5rem;
+  height: 5rem;
+  top: 60%;
+  right: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #ef476f;
+  color: aliceblue;
+  font-weight: 500;
+  transition: all 0.5s ease;
+}
+
 
 .checkbox-wrapper-46 input[type="checkbox"] {
     display: none;
@@ -204,22 +266,22 @@ const StyledWrapper = styled.div`
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.4);
   }
 
-  .card::before {
-    content: "31,99$";
-    position: absolute;
-    width: 5.5rem;
-    height: 5rem;
-    top: 60%;
-    right: 2px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background-color: #ef476f;
-    color: aliceblue;
-    font-weight: 500;
-    transition: all .5s ease;
-  }
+  .card-dublin::before {
+  content: "$29.99";
+  position: absolute;
+  width: 5.5rem;
+  height: 5rem;
+  top: 60%;
+  right: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #ef476f;
+  color: aliceblue;
+  font-weight: 500;
+  transition: all 0.5s ease;
+}
 
   .card__image {
     width: initial;
