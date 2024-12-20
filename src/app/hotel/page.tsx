@@ -67,7 +67,7 @@ const HotelListPage = () => {
                             </header>
                                         <p className="card__job-title">{hotel.name}</p>
                         </section>
-                        <footer className="card__footer">
+                        <div className="card__footer">
                             <div className="card__job-summary">
                                 <div className="card__job-icon">
                                     <svg height={35} width={28} viewBox="0 0 250 250" xmlns="http://www.w3.org/2000/svg">
@@ -88,7 +88,7 @@ const HotelListPage = () => {
                                             <button className="card__btn">view</button>
                                         </Link>
 
-                        </footer>
+                        </div>
                             </article>
                             </li>
                         ))}

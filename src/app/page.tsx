@@ -14,22 +14,42 @@ const Home = () => {
 
     return (<>
         <section className={styles["container"]} >
-            <h1 style={{ display: 'flex', justifyContent: 'center', fontSize: '2rem', color: 'white' }}>
+            <h1 style={{ display: 'flex', justifyContent: 'center', fontSize: '2rem', color: 'white', marginTop:'8rem' }}>
                 Let's see what expect in our journey!</h1><br /><br /><br /><br /><br /><br /><br />
             <div className={styles.banner}>
                 <form className={styles.form}>
+
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+                    <label className={styles.label}>Guests</label>
                     <input type="number" placeholder="Guests" className={styles.input} />
-                    <input type="date" placeholder="Departure" className={styles.input} />
-                    <input type="date" placeholder="Arrival" className={styles.input} />
-                    <input type="date" placeholder="Departure Date" className={styles.input} />
-                    <input type="date" placeholder="How long" className={styles.input} />
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+                    <label className={styles.label}>Destination</label>
+                    <input type="text" placeholder="City" className={styles.input} />
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+                    <label className={styles.label}>Departure Location</label>
+                    <input type="text" placeholder="City" className={styles.input} />
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+                    <label className={styles.label}>Departure Date</label>
+                    <input type="date" placeholder="Date" className={styles.input} />
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+                        <label className={styles.label}>Return Date</label>
+                    <input type="date" placeholder="Date" className={styles.input} />
+                        </div>
+
                     <StyledWrapper>
+                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+
                         <div className="checkbox-wrapper-46">
                             <input type="checkbox" id="cbx-46" className="inp-cbx" />
                             <label htmlFor="cbx-46" className="cbx"><span>
                                 <svg viewBox="0 0 12 10" height="10px" width="12px">
                                     <polyline points="1.5 6 4.5 9 10.5 1" /></svg></span><span style={{ fontSize: '0.9rem', color: 'white', display: 'flex', alignItems: 'center' }}>Direct Flights</span>
                             </label>
+                        </div>
                         </div>
                     </StyledWrapper>
                     <button type="submit" className={styles.button}>Search</button>
@@ -110,7 +130,7 @@ const StyledWrapper = styled.div`
   }
   .checkbox-wrapper-46 .cbx span:first-child {
     position: relative;
-    width: 28px;
+    width: 20px;
     height: 18px;
     border-radius: 3px;
     transform: scale(1);

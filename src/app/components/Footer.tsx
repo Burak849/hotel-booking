@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 const Footer = () => {
     return (<>
-        <footer className={styles['container']}>
+        <footer id="footer" className={styles['container']}>
             <StyledWrapper>
                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap:'5rem' }}>
                 <ul className="wrapper">
@@ -52,6 +52,7 @@ const Footer = () => {
 
 
             </StyledWrapper>
+
         </footer>
         </>
     );
@@ -62,9 +63,8 @@ const StyledWrapper = styled.div`
   .wrapper {
     display: inline-flex;
     list-style: none;
-    height: 120px;
+    margin-right:20rem;
     width: 100%;
-    padding-top: 40px;
     font-family: "Poppins", sans-serif;
     justify-content: center;
   }

@@ -56,8 +56,8 @@ const HotelPage = () => {
     if (error) return <div>{error}</div>;
 
     if (hotel) {
-        return (
-            <div>
+        return (<>
+            <div style={{ display: 'flex', justifyContent: 'center', padding: '20rem', alignItems: 'center', gap:'1rem' }}>
                 <h1>{hotel.name}</h1>
                 <img
                     src={hotel.imageUrl}
@@ -78,6 +78,7 @@ const HotelPage = () => {
                     ))}
                 </ul>
             </div>
+            </>
         );
     }
 
