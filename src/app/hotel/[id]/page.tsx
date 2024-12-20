@@ -27,7 +27,7 @@ const HotelPage = () => {
         if (query.id) {
             const fetchHotel = async () => {
                 try {
-                    const response = await fetch(`../../api/hotels`);
+                    const response = await fetch(`/api/hotels`);  // API'den otel verisini al
                     if (!response.ok) {
                         throw new Error(`Failed to fetch hotels: ${response.statusText}`);
                     }
@@ -38,11 +38,11 @@ const HotelPage = () => {
                         setHotel(selectedHotel);
                     } else {
                         setError("Hotel not found.");
-                        setTimeout(() => push('/'), 2000);
+                        setTimeout(() => push('/'), 2000); // Hotel bulunamazsa anasayfaya yönlendir
                     }
                 } catch (err: any) {
                     setError(err.message || "An error occurred while fetching the hotel.");
-                    setTimeout(() => push('/'), 2000);
+                    setTimeout(() => push('/'), 2000); // Hata durumunda anasayfaya yönlendir
                 } finally {
                     setLoading(false);
                 }

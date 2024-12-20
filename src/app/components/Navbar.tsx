@@ -6,7 +6,7 @@ import styled from 'styled-components';
 const Navbar = () => {
     return (
         <nav className={styles.navbar}>
-            <a className={`${styles.link} ${styles['home-link']}`} href="#home">
+            <a className={`${styles.link} ${styles['home-link']}`} href="/">
                 
                 <div>
                     Home
