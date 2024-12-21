@@ -8,7 +8,7 @@ const Footer = () => {
     return (<>
         <footer id="footer" className={styles['container']}>
             <StyledWrapper>
-                <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap:'5rem' }}>
+                <div className={styles.preWrap}>
                 <ul className="wrapper">
                     <li className="icon facebook">
                         <span className="tooltip">Facebook</span>

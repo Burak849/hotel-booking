@@ -98,7 +98,7 @@ const HotelPage = () => {
                     <div className="card">
 
                         <article className="artic">
-                            <img src={hotel.imageUrl} alt={hotel.name}/>
+                            <img src={hotel.imageUrl} style={{ borderRadius:12 }} alt={hotel.name} />
                         </article>
 
                         <aside className="card-content">
@@ -153,9 +153,7 @@ const StyledWrapper = styled.div`
 
 
 .artic{
-    width:100%;
-    max-width:65vh;
-    margin-right:2rem;
+    width:65vh;
     height:auto;
     border-radius:12px;
 }
@@ -183,8 +181,7 @@ const StyledWrapper = styled.div`
     width: 100vh;
     height:auto;
     background: white;
-    padding: 0.8em;
-    gap:0.3rem;
+    padding: 0.5em;
     border-radius: 12px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 1);
     flex-wrap: wrap;
@@ -194,6 +191,7 @@ const StyledWrapper = styled.div`
   .footer{
       display:flex;
       color:black;
+      gap: 1rem;
       align-items: center;
       flex-direction: column;
   }
@@ -226,7 +224,6 @@ const StyledWrapper = styled.div`
     font-size: 1.3rem;
     font-weight: 600;
     color: rgb(63, 121, 230);
-    margin-bottom: 3rem;
     text-align: left; 
   }
 

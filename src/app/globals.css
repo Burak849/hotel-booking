@@ -27,3 +27,15 @@ body {
     position: relative;
     overflow: hidden;
 }
+.notfoundstyle {
+        text-align: center;
+        align-items: center;
+        display: flex; 
+        flex-direction: column;
+        justify-content: center; 
+        padding: 20vh; 
+        font-size: 4rem;
+        color: black; 
+        background: white;
+        height: 100vh;
+}

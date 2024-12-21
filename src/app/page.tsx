@@ -31,46 +31,46 @@ const Home = () => {
         )}
     
         <section className={styles["container"]} >
-            <h1 style={{ display: 'flex', fontWeight: 800, fontFamily: 'Blue Sans, Roboto, Helvetica, Arial, sans-serif', justifyContent: 'center', fontSize: 48, color: 'white' }}>
-                Traveling in comfort, like never before.</h1><br /><br /><br /><br /><br /><br /><br />
+            <h1 className={styles.h1}>Traveling in comfort, like never before.</h1>
+            <br /><br /><br /><br /><br /><br /><br />
             <div className={styles.banner}>
                 <form className={styles.form}>
 
-                    <div style={{ display: 'flex', color: 'white', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+                    <div className={styles.bannerForm}>
                         <label className={styles.label}>Guests</label>
                         <input type="number" placeholder="Guests" className={styles.input} />
                     </div>
-                    <div style={{ display: 'flex', color: 'white', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+                    <div className={styles.bannerForm}>
                         <label className={styles.label}>Destination</label>
                         <input type="text" placeholder="City" className={styles.input} />
                     </div>
-                    <div style={{ display: 'flex', color: 'white', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+                    <div className={styles.bannerForm}>
                         <label className={styles.label}>Departure Location</label>
                         <input type="text" placeholder="City" className={styles.input} />
                     </div>
-                    <div style={{ display: 'flex', color: 'white', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+                    <div className={styles.bannerForm}>
                         <label className={styles.label}>Departure Date</label>
                         <input type="date" placeholder="Date" className={styles.input} />
                     </div>
-                    <div style={{ display: 'flex', color: 'white', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+                    <div className={styles.bannerForm}>
                         <label className={styles.label}>Return Date</label>
                         <input type="date" placeholder="Date" className={styles.input} />
                     </div>
 
                     <StyledWrapper>
-                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
+                        <div className={styles.bannerForm}>
 
                             <div className="checkbox-wrapper-46">
                                 <input type="checkbox" id="cbx-46" className="inp-cbx" />
                                 <label htmlFor="cbx-46" className="cbx"><span>
                                     <svg viewBox="0 0 12 10" height="10px" width="12px">
-                                        <polyline points="1.5 6 4.5 9 10.5 1" /></svg></span><span style={{ fontSize: '0.9rem', color: 'white', display: 'flex', alignItems: 'center' }}>Direct Flights</span>
+                                        <polyline points="1.5 6 4.5 9 10.5 1" /></svg></span><span className={styles.spanStyle}>Direct Flights</span>
                                 </label>
                             </div>
                         </div>
                     </StyledWrapper>
-                    
-                    <button type="submit" className={styles.button}>Search</button>
+
+                    <button type="button" className={styles.button}>Search</button>
                     
 
                 </form>
@@ -87,7 +87,7 @@ const Home = () => {
             </p>
 
             <StyledWrapper>
-                <div style={{ display: 'flex', justifyContent: 'center', gap: '4.5rem', position: 'relative', flexWrap: 'wrap', }}>
+                <div className={styles.cardButtons}>
                     <div className="card card-cork">
                         <img src="/media/cork.jpg" className="card__image" alt="Cork" />
                         <div className="card__content">

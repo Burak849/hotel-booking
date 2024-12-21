@@ -65,18 +65,7 @@ const HotelListPage = () => {
     return (
         <main>
             <div className={styles["listing"]}>
-                <h1
-                    style={{
-                        padding: "2rem",
-                        fontSize: 44,
-                        color: "teal",
-                        textShadow: "0px 0px 10px white",
-                        fontFamily: "cursive",
-                        fontWeight: 800,
-                    }}
-                >
-                    Hotel Lists
-                </h1>
+                <h1 className={styles.hlp1}>Hotel Lists</h1>
 
                 {loading && (
                     <LoadingOverlay>
@@ -129,9 +118,9 @@ const HotelListPage = () => {
                                         </div>
                                         <p><strong>Travel Dates:</strong> {hotel.datesOfTravel.join(" to ")}</p>
                                         <p><strong>Board Basis:</strong> {hotel.boardBasis}</p>
-                                        <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', gap:'0.5rem' }}>
+                                        <div className={styles.board4s }>
                                             <h2>Available Rooms</h2>
-                                            <ul style={{ display: 'flex', gap: '1rem' }}>
+                                            <ul className="ul2">
                                             {hotel.rooms.map((room, index) => (
                                                 <li key={index}>
                                                     <strong>{room.roomType}:</strong> {room.amount} rooms available
@@ -173,7 +162,10 @@ const LoadingOverlay = styled.div`
 
 
 const StyledWrapper = styled.div`
-
+.ul2{
+    display: flex;
+    gap: 1rem;
+}
   .card {
     width: 100vh;
     height:auto;
