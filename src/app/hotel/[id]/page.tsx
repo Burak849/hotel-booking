@@ -1,6 +1,6 @@
 ﻿"use client";
 
-import { useParams } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import styled from "styled-components";
 import { url } from 'inspector';
@@ -44,6 +44,7 @@ const renderStars = (rating: number) => {
 
 const HotelPage = () => {
     const { id } = useParams(); 
+    const router = useRouter();
     const [hotel, setHotel] = useState<Hotel | null>(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
@@ -74,6 +75,17 @@ const HotelPage = () => {
 
         fetchHotel();
     }, [id]);
+
+    useEffect(() => {
+        if (error) {
+            router.replace("/not-found");
+            const timeout = setTimeout(() => {
+                router.push('/hotel'); 
+            }, 5000);
+
+            return () => clearTimeout(timeout); 
+        }
+    }, [error, router]);
 
     if (loading) return <div>Loading...</div>;
     if (error) return <div>{error}</div>;

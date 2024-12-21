@@ -14,10 +14,10 @@ const NotFound = () => {
     }, [router]);
 
     return (
-        <div style={{ textAlign: "center", padding: "20vh", fontSize: 50 }}>
-            <h1>404 - Page Not Found</h1>
+        <div style={{ textAlign: "center", alignItems: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: "20vh", fontSize: '4rem', color: 'black', background: 'white', height: '100vh' }}>
+            <h1>Oops 404 - Page Not Found</h1>
             <p>
-                You are redicting to <a href="/hotel">"Hotels"</a> page in 5sec..
+                You are redirecting to <a href="/hotel">"Hotels"</a> page in 5sec..
             </p>
         </div>
     );

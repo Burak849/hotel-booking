@@ -1,60 +1,77 @@
 'use client';
 
-
+import { useEffect, useState } from "react";
 import React from 'react';
 import styles from './style/Home.module.css';
 import styled from 'styled-components';
-import { useRouter } from 'next/router';
-import { useNavigate } from 'react-router-dom';
+import style from "./style/HotelListPage.module.css";
 import Link from "next/link";
+import { useRouter } from 'next/router';
 
 
 const Home = () => {
 
+    const [loading, setLoading] = useState(false); 
+
+    const handleDetailsClick = () => {
+        setLoading(true);
+        setTimeout(() => {
+            setLoading(false);
+            window.location.href = `/hotel`;
+        }, 3000);
+
+    };
 
     return (<>
+
+        {loading && (
+            <LoadingOverlay>
+                <div className={styles['loading-bar']}></div>
+            </LoadingOverlay>
+        )}
+    
         <section className={styles["container"]} >
-            <h1 style={{ display: 'flex', fontWeight: 800, fontFamily:'Blue Sans, Roboto, Helvetica, Arial, sans-serif', justifyContent: 'center', fontSize: 48, color: 'white', marginTop: '15rem' }}>
+            <h1 style={{ display: 'flex', fontWeight: 800, fontFamily: 'Blue Sans, Roboto, Helvetica, Arial, sans-serif', justifyContent: 'center', fontSize: 48, color: 'white' }}>
                 Traveling in comfort, like never before.</h1><br /><br /><br /><br /><br /><br /><br />
             <div className={styles.banner}>
                 <form className={styles.form}>
 
                     <div style={{ display: 'flex', color: 'white', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
-                    <label className={styles.label}>Guests</label>
-                    <input type="number" placeholder="Guests" className={styles.input} />
+                        <label className={styles.label}>Guests</label>
+                        <input type="number" placeholder="Guests" className={styles.input} />
                     </div>
                     <div style={{ display: 'flex', color: 'white', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
-                    <label className={styles.label}>Destination</label>
-                    <input type="text" placeholder="City" className={styles.input} />
+                        <label className={styles.label}>Destination</label>
+                        <input type="text" placeholder="City" className={styles.input} />
                     </div>
                     <div style={{ display: 'flex', color: 'white', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
-                    <label className={styles.label}>Departure Location</label>
-                    <input type="text" placeholder="City" className={styles.input} />
+                        <label className={styles.label}>Departure Location</label>
+                        <input type="text" placeholder="City" className={styles.input} />
                     </div>
                     <div style={{ display: 'flex', color: 'white', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
-                    <label className={styles.label}>Departure Date</label>
-                    <input type="date" placeholder="Date" className={styles.input} />
+                        <label className={styles.label}>Departure Date</label>
+                        <input type="date" placeholder="Date" className={styles.input} />
                     </div>
                     <div style={{ display: 'flex', color: 'white', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
                         <label className={styles.label}>Return Date</label>
-                    <input type="date" placeholder="Date" className={styles.input} />
-                        </div>
+                        <input type="date" placeholder="Date" className={styles.input} />
+                    </div>
 
                     <StyledWrapper>
                         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column' }}>
 
-                        <div className="checkbox-wrapper-46">
-                            <input type="checkbox" id="cbx-46" className="inp-cbx" />
-                            <label htmlFor="cbx-46" className="cbx"><span>
-                                <svg viewBox="0 0 12 10" height="10px" width="12px">
-                                    <polyline points="1.5 6 4.5 9 10.5 1" /></svg></span><span style={{ fontSize: '0.9rem', color: 'white', display: 'flex', alignItems: 'center' }}>Direct Flights</span>
-                            </label>
-                        </div>
+                            <div className="checkbox-wrapper-46">
+                                <input type="checkbox" id="cbx-46" className="inp-cbx" />
+                                <label htmlFor="cbx-46" className="cbx"><span>
+                                    <svg viewBox="0 0 12 10" height="10px" width="12px">
+                                        <polyline points="1.5 6 4.5 9 10.5 1" /></svg></span><span style={{ fontSize: '0.9rem', color: 'white', display: 'flex', alignItems: 'center' }}>Direct Flights</span>
+                                </label>
+                            </div>
                         </div>
                     </StyledWrapper>
-                    <Link href="/hotel">
-                        <button type="submit" className={styles.button}>Search</button>
-                    </Link>
+                    
+                    <button type="submit" className={styles.button}>Search</button>
+                    
 
                 </form>
             </div>
@@ -70,15 +87,15 @@ const Home = () => {
             </p>
 
             <StyledWrapper>
-                <div style={{ display: 'flex', justifyContent: 'center', gap: '4.5rem', position: 'relative' }}>
+                <div style={{ display: 'flex', justifyContent: 'center', gap: '4.5rem', position: 'relative', flexWrap: 'wrap', }}>
                     <div className="card card-cork">
                         <img src="/media/cork.jpg" className="card__image" alt="Cork" />
                         <div className="card__content">
                             <span className="title">Cork</span>
 
-                            <Link href="/hotel">
-                            <button type="submit" className={styles.button} style={{ fontSize: 15, padding: '.5em 2em', width: '9em' }} >Details</button>
-                            </Link>
+                            
+                            <button type="submit" onClick={handleDetailsClick} className={styles.button} style={{ fontSize: 15, padding: '.5em 2em', width: '9em' }}>Details</button>
+                            
 
                         </div>
                     </div>
@@ -86,27 +103,27 @@ const Home = () => {
                         <img src="/media/dublin.jpg" className="card__image" alt="Dublin" />
                         <div className="card__content">
                             <span className="title">Dublin</span>
-                            <Link href="/hotel">
-                            <button type="submit" className={styles.button} style={{ fontSize: 15, padding: '.5em 2em', width: '9em' }} >Details</button>
-                            </Link>
+                            
+                            <button type="submit" onClick={handleDetailsClick} className={styles.button} style={{ fontSize: 15, padding: '.5em 2em', width: '9em' }} >Details</button>
+                           
                         </div>
                     </div>
                     <div className="card card-galway">
                         <img src="/media/galway.jpg" className="card__image" alt="Galway" />
                         <div className="card__content">
                             <span className="title">Galway</span>
-                            <Link href="/hotel">
-                            <button type="submit" className={styles.button} style={{ fontSize: 15, padding: '.5em 2em', width: '9em' }} >Details</button>
-                            </Link>
+                            
+                            <button type="submit" onClick={handleDetailsClick} className={styles.button} style={{ fontSize: 15, padding: '.5em 2em', width: '9em' }} >Details</button>
+                         
                         </div>
                     </div>
                     <div className="card card-paris">
                         <img src="/media/paris.jpg" className="card__image" alt="Galway" />
                         <div className="card__content">
                             <span className="title">Paris</span>
-                            <Link href="/hotel">
-                                <button type="submit" className={styles.button} style={{ fontSize: 15, padding: '.5em 2em', width: '9em' }} >Details</button>
-                            </Link>
+                            
+                            <button type="submit" onClick={handleDetailsClick} className={styles.button} style={{ fontSize: 15, padding: '.5em 2em', width: '9em' }} >Details</button>
+                            
                         </div>
                     </div>
                 </div>
@@ -117,7 +134,21 @@ const Home = () => {
     </>
     );
 
-}
+};
+const LoadingOverlay = styled.div`
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+`;
+
 const StyledWrapper = styled.div`
 .card-paris::before {
   content: "$79.99";
