@@ -4,9 +4,9 @@
     flex-direction: column;
     align-items: center;
     width: auto;
-    gap:4rem;
+    gap: 4rem;
     height: 10rem;
-    background-color: rgb(255 255 255 / var(--tw-bg-opacity, .09));
+    background-color: #01000c; /*rgb(255 255 255 / var(--tw-bg-opacity, .09))*/
 }
 .preWrap {
     display: flex; 

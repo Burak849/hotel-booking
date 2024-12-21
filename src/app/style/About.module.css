@@ -17,3 +17,9 @@
     gap: 1rem;
     height:100vh;
 }
+
+.asi {
+    background-image: url(../../../public/media/hr.jpg);
+    height:50vh;
+    width:auto;
+}

@@ -71,7 +71,6 @@ const StyledWrapper = styled.div`
 
   .wrapper .icon {
     position: relative;
-    background: #fff;
     border-radius: 50%;
     margin: 10px;
     width: 50px;

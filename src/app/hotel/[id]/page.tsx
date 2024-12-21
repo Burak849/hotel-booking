@@ -120,10 +120,10 @@ const HotelPage = () => {
                                 </div>
                         </aside>
 
-                        <footer className="footer">
+                        <div className="footer">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in varius nisi. Etiam a hendrerit magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam tellus felis, dignissim at eros quis, malesuada luctus arcu. Integer nec nisl ante. Sed maximus tincidunt elit, ut tempus odio varius at. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ultrices orci in urna gravida aliquam. Quisque mattis mauris erat, non scelerisque libero laoreet ut. Donec convallis sodales dui ut dapibus. Morbi nunc sem, facilisis ac condimentum sollicitudin, fringilla a ipsum.</p>
                             <button className="btn">Rent</button>
-                        </footer>
+                        </div>
 
                 </div>
                         

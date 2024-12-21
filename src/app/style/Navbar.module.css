@@ -1,5 +1,5 @@
 .navbar {
-    @apply flex-row flex text-custom-baslik justify-evenly items-center gap-20 font-semibold p-5 top-0 fixed z-50 w-full px-8 py-5 transition-all ease-in-out duration-100 rounded-none border-0 border-white border-opacity-40 bg-opacity-10 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] bg-white;
+    @apply flex-row flex text-custom-baslik justify-evenly items-center font-semibold p-5 top-0 fixed z-50 w-full px-8 py-5 transition-all ease-in-out duration-100 rounded-none border-0 border-white border-opacity-40 bg-opacity-10 shadow-lg shadow-black/[0.03] backdrop-blur-[0.1rem] bg-white;
 }
 
 
