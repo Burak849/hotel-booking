@@ -1,10 +1,12 @@
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 import styles from '../style/Navbar.module.css';
 
 const Navbar = () => {
+
     return (
         <nav className={styles.navbar}>
+ 
             <Link href="/" className={`${styles.link} ${styles['home-link']}`}>
                 <div>Home</div>
             </Link>
@@ -18,7 +20,8 @@ const Navbar = () => {
                 <div>Contact</div>
             </Link>
             <button className={styles['button']}>Login</button>
-            <button className={styles['button']}>Register</button>
+                <button className={styles['button']}>Register</button>
+
         </nav>
     );
 };

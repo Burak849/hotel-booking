@@ -61,12 +61,15 @@ const Footer = () => {
 
 const StyledWrapper = styled.div`
   .wrapper {
-    display: inline-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     list-style: none;
-    margin-right:20rem;
+    margin: 0;
+    padding: 0;
+    gap: 1.5rem;
     width: 100%;
     font-family: "Poppins", sans-serif;
-    justify-content: center;
   }
 
   .wrapper .icon {

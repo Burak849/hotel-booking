@@ -379,6 +379,9 @@ const StyledWrapper = styled.div`
     transition: all .5s ease;
     border-radius:2%;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.4);
+    max-width:100%;
+    max-height:100%;
+    object-fit:contain;
   }
 
   .card-dublin::before {
