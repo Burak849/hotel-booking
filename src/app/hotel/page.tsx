@@ -72,7 +72,7 @@ const HotelListPage = () => {
                         <div className={styles['loading-bar']}></div>
                     </LoadingOverlay>
                 )}
-                <StyledWrapper>
+                <StyledWrapper style={{ zIndex: 2 }}>
                     <ul className={styles["DetailList"]}>
                         {hotels.map((hotel) => (
                             <li key={hotel.id}>

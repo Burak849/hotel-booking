@@ -94,7 +94,7 @@ const HotelPage = () => {
         return (<>
 
             <div className={styles['detailsbg'] }>
-            <StyledWrapper>
+                <StyledWrapper>
                     <div className="card">
 
                         <article className="artic">
@@ -138,6 +138,7 @@ const HotelPage = () => {
 };
 
 const StyledWrapper = styled.div`
+z-index:2;
 
 .rating {
     display: inline-flex;

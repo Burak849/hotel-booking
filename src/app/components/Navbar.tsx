@@ -35,10 +35,10 @@ const Navbar = () => {
             <Link href="#footer" className={styles.link}>
                 <div>Contact</div>
             </Link>
-            <Link href="/login" className={styles.link}>
+            <Link href="/login" >
                 <button className={styles['button']}>Login</button>
             </Link>
-            <Link href="/register" className={styles.link}>
+            <Link href="/register">
                 <button className={styles['button']}>Register</button>
             </Link>
 

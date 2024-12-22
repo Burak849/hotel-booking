@@ -239,6 +239,8 @@ const StyledWrapper = styled.div`
   }
 
   .form .input {
+      color:black;
+
     width: 100%;
     background: white;
     border: none;

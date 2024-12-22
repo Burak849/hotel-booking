@@ -18,6 +18,7 @@
     max-height: 100%;
     padding: 4rem;
     gap:6rem;
+    z-index:0;
 }
 @media (min-width:1800px){
     .container{
@@ -36,6 +37,7 @@
         justify-content: center;
         font-size: 48px; 
         color: white;
+
 }
 .loading-bar {
     position: relative;
@@ -105,13 +107,15 @@
     font-weight: bold;
     top: 0;
     bottom: 0;
+
 }
 .bannerForm {
     display: flex;
-    color: white; 
+    color: white;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
     flex-direction: column;
+    z-index: 1;
 }
 .spanStyle {
     font-size: 0.9rem;
@@ -127,6 +131,7 @@
     align-items: center;
     gap: 2rem;
     flex-wrap: nowrap; 
+
 }
 .label {
     font-size: 0.9rem;
@@ -137,12 +142,14 @@
     border-radius: 1rem;
     color: grey;
     font-size: 1rem;
+
 }
 .cardButtons {
-    display: flex; 
-    justify-content: center; 
-    gap: 2rem; 
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
     flex-wrap: wrap;
+    z-index: 1;
 }
 
 .button {
@@ -154,6 +161,7 @@
     font-family: inherit;
     font-size: 17px;
     padding: 0.6em 1.5em;
+    z-index: 1;
 }
 
     .button:hover {
