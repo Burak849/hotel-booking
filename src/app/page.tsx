@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import React from 'react';
 import styles from './style/Home.module.css';
 import styled from 'styled-components';
@@ -9,9 +9,11 @@ import Link from "next/link";
 import { useRouter } from 'next/router';
 
 
+
 const Home = () => {
 
-    const [loading, setLoading] = useState(false); 
+    const [loading, setLoading] = useState(false);
+
 
     const handleDetailsClick = () => {
         setLoading(true);
@@ -100,7 +102,7 @@ const Home = () => {
             </StyledWrapper>
 
         </section>
-        <section className={styles['informations']}>
+        <section className={styles["informations"]}>
             <h1>Popular Travel Spots</h1>
             <p style={{ padding: '2rem' }}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum blandit vitae orci quis dignissim.
@@ -108,8 +110,8 @@ const Home = () => {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum blandit vitae orci quis dignissim.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum blandit vitae orci quis dignissim.
             </p>
-
             <StyledWrapper>
+
                 <div className={styles.cardButtons}>
                     <div className="card card-cork">
                         <img src="/media/cork.jpg" className="card__image" alt="Cork" />

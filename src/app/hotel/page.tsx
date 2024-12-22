@@ -167,7 +167,7 @@ const StyledWrapper = styled.div`
     gap: 1rem;
 }
   .card {
-    width: 100vh;
+    width: auto;
     height:auto;
     background-color: #fef4e0;
     border-radius: 1.2rem;
@@ -208,7 +208,7 @@ const StyledWrapper = styled.div`
     font-weight: 700;
     font-size: 0.875rem;
   }
-  @media (min-width: 340px) {
+  @media (min-width: 480px) {
     .card__footer {
       flex-direction: row;
       align-items: center;

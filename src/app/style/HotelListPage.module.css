@@ -151,13 +151,18 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) and (min-width:480px){
     .listing {
-        padding: 1rem;
+        padding: 5rem;
+        height: auto;
+        width: auto;
     }
 
     .DetailList {
         gap: 0.5rem;
+        height: auto;
+        width: auto;
+        padding: 12rem;
     }
 
     .card {
