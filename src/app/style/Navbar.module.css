@@ -1,11 +1,13 @@
 .navbar {
     @apply flex-row flex text-custom-baslik justify-evenly items-center font-semibold p-5 top-0 fixed z-50 w-full px-8 py-5 transition-all ease-in-out duration-100 rounded-none border-0 border-white border-opacity-40 bg-opacity-10 shadow-lg shadow-black/[0.03] backdrop-blur-[0.2rem] bg-white;
 
-    @apply lg:justify-evenly lg:flex-row; 
+    @apply lg:justify-evenly lg:flex-row;
     @apply md:flex-row md:justify-between;
-    @apply flex-row justify-evenly; 
+    @apply flex-row justify-evenly;
 }
-
+    .navbar.scrolled {
+        @apply bg-opacity-20 shadow-none backdrop-blur-none;
+    }
 .link {
     position: relative;
     opacity: 1;

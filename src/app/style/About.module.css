@@ -12,10 +12,25 @@
     background-size: cover;
     display: flex;
     justify-content: center;
-    padding: 20rem;
+    padding: 5rem;
     align-items: center;
     gap: 1rem;
+    height:100vh;
+}
+@media (max-width: 650px){
+
+    .detailsbg {
     height:auto;
+    padding:6rem;
+    }
+    }
+
+@media (max-width: 400px) {
+
+    .detailsbg {
+        height: auto;
+        padding: 1rem;
+    }
 }
 
 .asi {

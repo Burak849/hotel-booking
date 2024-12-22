@@ -189,6 +189,21 @@ const StyledWrapper = styled.div`
     justify-content:center;
     gap:1.5rem;
   }
+  @media (max-width: 400px) {
+
+    .card {
+        height: auto;
+        margin-top:8rem;
+    }
+}
+ @media (max-width: 800px) and (min-width: 400px) {
+
+    .card {
+        height: auto;
+        margin-top:8rem;
+    }
+}
+
   .footer{
       display:flex;
       color:black;
