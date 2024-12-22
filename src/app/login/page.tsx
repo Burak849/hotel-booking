@@ -1,10 +1,13 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import React from 'react';
 import styled from 'styled-components';
 import styles from '../style/Login.module.css';
+import Link from 'next/link';
 
 const Login = () => {
+
     return (<>
         <div className={styles.contwhole}>
         <StyledWrapper>
@@ -45,12 +48,15 @@ const Login = () => {
                 <StyledSingup>
                     <div className={styles.signst}>
                         <p style={{fontWeight: 600}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget tortor erat.</p>
-                    <button className="signupBtn">
+                        <Link href="/register">
+                        <button className="signupBtn">
                         Sign Up
                         <span className="arrow">
                             <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512" fill="rgb(183, 128, 255)"><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" /></svg>
                         </span>
-                    </button>
+                            </button>
+                        </Link>
+
                 </div>
                 </StyledSingup>
             </div>
@@ -76,7 +82,34 @@ const StyledSingup = styled.div`
     cursor: pointer;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.212);
   }
+  @media (max-width: 480px) {
+    .contwhole {
+        height:auto;
+        padding: 6rem;
+    }
 
+    .container {
+        padding: 15px;
+    }
+
+    .heading {
+        font-size: 24px;
+    }
+
+    .form .input {
+        padding: 10px 12px;
+    }
+
+    .form .login-button {
+        padding-block: 10px;
+        font-size: 14px;
+    }
+
+    .signupBtn {
+        width: 100px;
+        height: 35px;
+    }
+}
   .arrow {
     position: absolute;
     right: 7.5px;
@@ -105,9 +138,76 @@ const StyledSingup = styled.div`
     }
   }`;
 const StyledWrapper = styled.div`
+
+@media (max-width: 1200px) {
+    .contwhole {
+        flex-direction: column;
+        gap: 5rem;
+    }
+
+    .contlogn, .contsign {
+        height: auto;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .signst {
+        text-align: center;
+        width:auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .form .input {
+        padding: 12px 15px;
+    }
+
+    .form .login-button {
+        padding-block: 12px;
+    }
+
+    .social-button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contwhole {
+        height:auto;
+        padding: 6rem;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .heading {
+        font-size: 24px;
+    }
+
+    .form .input {
+        padding: 10px 12px;
+    }
+
+    .form .login-button {
+        padding-block: 10px;
+        font-size: 14px;
+    }
+
+    .signupBtn {
+        width: 100px;
+        height: 35px;
+    }
+}
   .container {
-    width: 35rem;
-    height:32rem;
+    width: auto;
+    height:auto;
     background: #F8F9FD;
     background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(244, 247, 251) 100%);
     border-radius: 40px;

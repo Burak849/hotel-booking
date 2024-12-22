@@ -33,3 +33,71 @@
     color:black;
 
 }
+
+
+@media (max-width: 1200px) {
+    .contwhole {
+        flex-direction: column;
+        gap: 5rem;
+    }
+
+    .contlogn, .contsign {
+        height: auto;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .signst {
+        text-align: center;
+        width:auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .form .input {
+        padding: 12px 15px;
+    }
+
+    .form .login-button {
+        padding-block: 12px;
+    }
+
+    .social-button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contwhole {
+        height:auto;
+        padding: 6rem;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .heading {
+        font-size: 24px;
+    }
+
+    .form .input {
+        padding: 10px 12px;
+    }
+
+    .form .login-button {
+        padding-block: 10px;
+        font-size: 14px;
+    }
+
+    .signupBtn {
+        width: 100px;
+        height: 35px;
+    }
+}

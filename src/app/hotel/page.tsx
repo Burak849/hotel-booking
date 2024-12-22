@@ -186,7 +186,7 @@ const StyledWrapper = styled.div`
     bottom:0%;
     left:50%;
     transform: translate(-50%, -50%);
-    color: #272727;
+    color: #e1b35c;
     font-size: 1.6rem;
     font-weight: 600;
     z-index:2;
