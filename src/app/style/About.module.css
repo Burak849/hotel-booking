@@ -8,9 +8,9 @@
     background: transparent;
 }
 .abocontainer {
-    height:100vh;
+    height:auto;
     display: flex;
-    padding: 5rem;
+    padding: 7rem;
     justify-content: center;
     position: relative;
     align-items: center;
@@ -75,7 +75,7 @@
 @media (max-width: 650px) {
     .abocontainer {
         flex-direction: column;
-        padding: 3rem;
+        padding: 8rem;
     }
 
     .image-container {

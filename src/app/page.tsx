@@ -24,6 +24,20 @@ const Home = () => {
 
     };
 
+    const [formState, setFormState] = useState({
+        guests: "",
+        departs: "",
+        destination: "",
+        departureDate: "",
+        howLong: ""
+    });
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormState((prev) => ({ ...prev, [name]: value }));
+    };
+
+
     return (<>
 
         {loading && (
@@ -41,23 +55,58 @@ const Home = () => {
 
                     <div className={styles.bannerForm}>
                         <label className={styles.label}>Guests</label>
-                        <input type="number" placeholder="Guests" className={styles.input} />
+                        <input
+                            type="number"
+                            min="1"
+                            placeholder="Guest Number"
+                            className={styles.input}
+                            name="guests"
+                            value={formState.guests} 
+                            onChange={handleInputChange} />
+                    </div>
+                    <div className={styles.bannerForm}>
+                        <label className={styles.label}>Departs</label>
+                        <input
+                            type="text"
+                            placeholder="City"
+                            className={styles.input}
+                            name="departs"
+                            value={formState.departs}
+                            onChange={handleInputChange}
+                            disabled={!formState.guests} />
                     </div>
                     <div className={styles.bannerForm}>
                         <label className={styles.label}>Destination</label>
-                        <input type="text" placeholder="City" className={styles.input} />
-                    </div>
-                    <div className={styles.bannerForm}>
-                        <label className={styles.label}>Departure Location</label>
-                        <input type="text" placeholder="City" className={styles.input} />
+                        <input
+                            type="text"
+                            placeholder="City"
+                            className={styles.input}
+                            name="destination"
+                            value={formState.destination}
+                            onChange={handleInputChange}
+                            disabled={!formState.departs} />
                     </div>
                     <div className={styles.bannerForm}>
                         <label className={styles.label}>Departure Date</label>
-                        <input type="date" placeholder="Date" className={styles.input} />
+                        <input
+                            type="date"
+                            placeholder="Date"
+                            className={styles.input}
+                            name="departureDate"
+                            value={formState.departureDate}
+                            onChange={handleInputChange}
+                            disabled={!formState.destination} />
                     </div>
                     <div className={styles.bannerForm}>
-                        <label className={styles.label}>Return Date</label>
-                        <input type="date" placeholder="Date" className={styles.input} />
+                        <label className={styles.label}>How Long?</label>
+                        <input
+                            type="date"
+                            placeholder="Date"
+                            className={styles.input}
+                            name="howLong"
+                            value={formState.howLong}
+                            onChange={handleInputChange}
+                            disabled={!formState.departureDate} />
                     </div>
 
                     <StyledWrapper>

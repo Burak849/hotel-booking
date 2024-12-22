@@ -18,7 +18,7 @@ const NotFound = () => {
         <div className='notfoundstyle'>
             <h1>Oops 404 - Page Not Found</h1>
             <p>
-                You are redirecting to <a href="/hotel">"Hotels"</a> page in 5sec..
+                You are redirecting to <a href="/hotel">"Hotel Lists"</a> page in 5sec..
             </p>
         </div>
     );

@@ -87,6 +87,8 @@ const StyledLogin = styled.div`
     position: relative;
     cursor: pointer;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.212);
+    z-index: 1;
+
   }
 
   .arrow {
@@ -225,6 +227,8 @@ const StyledWrapper = styled.div`
     border: 5px solid rgb(255, 255, 255);
     box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
     margin: 20px;
+    z-index: 1;
+
   }
 
   .heading {
