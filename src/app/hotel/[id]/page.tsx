@@ -98,7 +98,7 @@ const HotelPage = () => {
                     <div className="card">
 
                         <article className="artic">
-                            <img src={hotel.imageUrl} style={{ borderRadius:12 }} alt={hotel.name} />
+                            <img src={hotel.imageUrl} style={{ borderRadius: 12, color:'#4f4a4a' }} alt={hotel.name} />
                         </article>
 
                         <aside className="card-content">
@@ -153,7 +153,7 @@ const StyledWrapper = styled.div`
 
 
 .artic{
-    width:65vh;
+    width:50vh;
     height:auto;
     border-radius:12px;
 }
@@ -181,12 +181,13 @@ const StyledWrapper = styled.div`
     width: 100vh;
     height:auto;
     background: white;
-    padding: 0.5em;
+    padding: 1em;
     border-radius: 12px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 1);
     flex-wrap: wrap;
     align-content: flex-end;
     justify-content:center;
+    gap:1.5rem;
   }
   .footer{
       display:flex;
@@ -258,6 +259,56 @@ const StyledWrapper = styled.div`
   .name:hover {
     cursor: pointer;
   }
+
+  @media (max-width: 950px) {
+  .card {
+    flex-direction: column; 
+    align-items: center;
+    width: 90%; 
+    padding: 1rem;
+  }
+
+  .artic {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .card-content {
+    text-align: center;
+    gap: 0.5rem; 
+  }
+
+  .btn {
+    width: 80%; 
+  }
+
+  .rating {
+    font-size: 1.2rem; 
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%; 
+    box-shadow: none;
+  }
+
+  .footer {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .heading {
+    gap: 0.8rem; 
+  }
+}
+
 
   
   `;

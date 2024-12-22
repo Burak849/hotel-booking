@@ -34,7 +34,6 @@ const Home = () => {
             <div className={styles.h1}>
                 <h1>Traveling in comfort, like never before.</h1>
             </div>
-            <br /><br /><br /><br /><br /><br /><br />
             <div className={styles.banner}>
                 <form className={styles.form}>
 
@@ -73,14 +72,13 @@ const Home = () => {
 
                     </StyledWrapper>
 
-                    <button type="button" className={styles.button}>Search</button>
+                    <button type="button" onClick={handleDetailsClick} className={styles.button}>Search</button>
                     
 
                 </form>
 
             </div>
 
-            <br /><br /><br />
 
 
             <StyledWrapper>
