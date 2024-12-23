@@ -1,5 +1,5 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
+This project is using styled-components. Install it with npm i styled-components or yarn add styled-components, or copy the styles to your own CSS file for this code to work.
 ## Getting Started
 
 First, run the development server:
